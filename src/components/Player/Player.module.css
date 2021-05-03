@@ -1,0 +1,11 @@
+.Player{
+    width: 35vw !important;    
+    height: auto !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.unusedColors{
+    font-size: 17px;
+}

@@ -1,5 +1,6 @@
-import Player from "./Player";
+import Player from "../Player/Player";
 import { useState } from "react";
+import styles from './Container.module.css';
 
 const Container = () => {
   const [unusedColors, setColor] = useState(["Purple", "HotPink", "Olive"]);
@@ -15,14 +16,14 @@ const Container = () => {
   };
 
   return (
-    <>
+    <div className={styles.Container}>
       <Player key={1} ID={1} color={"Blue"} unused={unusedColors} setunused = {updateColors} changed={changed} setchange={setchanged}/>
       <Player key={2} ID={2} color={"Red"} unused={unusedColors} setunused = {updateColors} changed={changed} setchange={setchanged}/>
       <Player key={3} ID={3} color={"Green"} unused={unusedColors} setunused = {updateColors} changed={changed} setchange={setchanged}/>
       <Player key={4} ID={4} color={"Yellow"} unused={unusedColors} setunused = {updateColors} changed={changed} setchange={setchanged}/>
 
       
-    </>
+    </div>
   );
 };
 

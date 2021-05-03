@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './Player.module.css';
 
 const Player = ({ ID, color, unused, setunused, changed, setchange }) => {
     const [current , setcurrent] = useState(color);
@@ -10,12 +11,10 @@ const Player = ({ ID, color, unused, setunused, changed, setchange }) => {
       
 
   return (
-    <div
-      className="Player"
-      style={{ width: "33vh", height: "auto", backgroundColor: current, display: "flex" }}
-    >
-      <h1> Player {ID}</h1>
-      <select
+    <div className={styles.Player}
+    style={{backgroundColor: current}}>
+      <h2> Player {ID}</h2>
+      <select className="unusedColors"
         key={"select" + ID}
         value={current}
         onChange={(e) => {
